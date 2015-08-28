@@ -91,28 +91,6 @@
                 </tr>                
             </table>
         </div>
- <!--       <div class="switrgbhow">
-            <table width="100%">
-                <tr align="center" height="134px">
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">1</span></td>
-                    <!-- <td valign="middle"><hr class="hrline" size="80" /></td> -->
-	<!--				<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">2</span></td>
-					<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">3</span></td>
-					<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">4</span></td>
-                </tr>                
-            </table>
-        </div>	
-        <div class="switrgbhow">
-            <table width="100%">
-                <tr align="center" height="134px">
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">5</span></td>
-                    <!-- <td valign="middle"><hr class="hrline" size="80" /></td> -->
-	<!--				<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">6</span></td>
-					<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">7</span></td>
-					<td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">8</span></td>
-                </tr>                
-            </table>
-        </div>		-->	
         <!-- <div class="humihis">
             <div id="device_id"></div>
             <div id="debug"></div>
@@ -214,16 +192,7 @@
                 }
             }
         }
-        // 控制按钮显示的事件
-        $("#switchbtn").click(function() {
-            var topic = device_id+'/in';
-            var commond;
-            var swtimg = $("#switchbtn").attr("src");
-            if("./image/03-turn-on.svg" == swtimg){
-                commond = '{"device_switch":false}';
-                $("#switchbtn").attr("src", "./image/03-turn-off.svg");
-                $("#switchspan").text("do");
-            }
+
         // 控制按钮显示的事件
         $("#switchbtn").click(function() {
             var topic = device_id+'/in';
@@ -258,7 +227,6 @@
             var commond = '{"rgbled_switch":true,"rgbled_hues":60, "rgbled_saturation":100, "rgbled_brightness":100}'; 
             client.publish(topic, commond);
         }
-
     }
 
     // 日志打印在页面的部分    
