@@ -222,11 +222,11 @@
             var commond;
             var swtimg = $("#music1imgid").attr("src");
             if("./image/03-turn-on.svg" == swtimg){
-                commond = '{"device_switch":false}';
+                commond = '{"music1":false}';
                 $("#music1imgid").attr("src", "./image/03-turn-off.svg");
                 $("#music1span").text("A");
             }else{
-                commond = '{"device_switch":true}';
+                commond = '{"music1":true}';
                 $("#music1imgid").attr("src", "./image/03-turn-on.svg");
                 $("#music1span").text("a");
             }
@@ -239,11 +239,13 @@
             var commond;
             var swtimg = $("#switchbtn").attr("src");
             if("./image/03-turn-on.svg" == swtimg){
-                commond = '{"device_switch":false}';
+           //     commond = '{"device_switch":false}';
+		   commond = '{"music1":false}';
                 $("#switchbtn").attr("src", "./image/03-turn-off.svg");
                 $("#switchspan").text("关");
             }else{
-                commond = '{"device_switch":true}';
+          //      commond = '{"device_switch":true}';
+		   commond = '{"music1":true}';
                 $("#switchbtn").attr("src", "./image/03-turn-on.svg");
                 $("#switchspan").text("开");
             }
