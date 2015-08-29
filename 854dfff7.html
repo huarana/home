@@ -213,6 +213,26 @@
             }
         }
 
+		
+		
+
+        // 控制按钮显示的事件  新加的  by huarana
+        $("#music1imgid").click(function() {
+            var topic = device_id+'/in';
+            var commond;
+            var swtimg = $("#music1imgid").attr("src");
+            if("./image/03-turn-on.svg" == swtimg){
+                commond = '{"device_switch":false}';
+                $("#music1imgid").attr("src", "./image/03-turn-off.svg");
+                $("#music1span").text("A");
+            }else{
+                commond = '{"device_switch":true}';
+                $("#music1imgid").attr("src", "./image/03-turn-on.svg");
+                $("#music1span").text("a");
+            }
+            client.publish(topic, commond);
+        });
+
         // 控制按钮显示的事件
         $("#switchbtn").click(function() {
             var topic = device_id+'/in';
@@ -249,11 +269,11 @@
         }
 		
 		//增加按键发送给代码   by huarana
-        function music1() {
-            var topic = device_id+'/out';
-            var commond = '{"music1":true}'; 
-            client.publish(topic, commond);
-        }
+//        function music1() {
+//            var topic = device_id+'/in';
+//            var commond = '{"music1":true}'; 
+//            client.publish(topic, commond);
+//        }
 		
     }
 
