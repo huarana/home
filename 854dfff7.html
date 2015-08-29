@@ -250,7 +250,7 @@
 		
 		//增加按键发送给代码   by huarana
         function music1() {
-            var topic = device_id+'/in';
+            var topic = device_id+'/out';
             var commond = '{"music1":true}'; 
             client.publish(topic, commond);
         }
