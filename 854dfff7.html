@@ -101,13 +101,13 @@
                 </tr>                
             </table>
         </div>   -->
-        <div class="switrgbhow">
+        <div class="button_music">
             <table width="100%">
                 <tr align="center" height="134px">
-                    <td valign="middle"><img id="switchbtn" src="./image/music_1.svg" alt=""><br/><span id="switchspan">5</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/music_2.svg" alt=""><br/><span id="switchspan">6</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/music_3.svg" alt=""><br/><span id="switchspan">7</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/mute1.svg" alt=""><br/><span id="switchspan">8</span></td>  
+                    <td valign="middle"><img id="music1" src="./image/music_1.svg" alt=""><br/><span id="music1">1</span></td>
+                    <td valign="middle"><img id="music2" src="./image/music_2.svg" alt=""><br/><span id="music2">2</span></td>
+                    <td valign="middle"><img id="music3" src="./image/music_3.svg" alt=""><br/><span id="music3">3</span></td>
+                    <td valign="middle"><img id="mute1" src="./image/mute1.svg" alt=""><br/><span id="mute1">4</span></td>  
                 </tr>                
             </table>
         </div>
@@ -247,6 +247,14 @@
             var commond = '{"rgbled_switch":true,"rgbled_hues":60, "rgbled_saturation":100, "rgbled_brightness":100}'; 
             client.publish(topic, commond);
         }
+		
+		//增加按键发送给代码   by huarana
+        function music1() {
+            var topic = device_id+'/in';
+            var commond = '{"music1":true}'; 
+            client.publish(topic, commond);
+        }
+		
     }
 
     // 日志打印在页面的部分    
