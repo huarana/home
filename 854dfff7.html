@@ -91,23 +91,23 @@
                 </tr>                
             </table>
         </div>
- <!--       <div class="switrgbhow">
+       <div class="button_music1">
             <table width="100%">
                 <tr align="center" height="134px">
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">1</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">2</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">3</span></td>
-                    <td valign="middle"><img id="switchbtn" src="./image/03-turn-on.svg" alt=""><br/><span id="switchspan">4</span></td>
+                    <td valign="middle"><img id="switchbtn" src="./image/music_2.svg" alt=""><br/><span id="switchspan">哆</span></td>
+                    <td valign="middle"><img id="switchbtn" src="./image/music_2.svg" alt=""><br/><span id="switchspan">唻</span></td>
+                    <td valign="middle"><img id="switchbtn" src="./image/music_2.svg" alt=""><br/><span id="switchspan">咪</span></td>
+                    <td valign="middle"><img id="switchbtn" src="./image/music_2.svg" alt=""><br/><span id="switchspan">发</span></td>
                 </tr>                
             </table>
-        </div>   -->
-        <div class="button_music">
+        </div>  
+        <div class="button_music2">
             <table width="100%">
-                <tr align="center" height="134px">
-                    <td valign="middle"><img id="music1imgid" src="./image/music_1.svg" alt=""><br/><span id="music1span">1</span></td>
-                    <td valign="middle"><img id="music2imgid" src="./image/music_2.svg" alt=""><br/><span id="music2span">2</span></td>
-                    <td valign="middle"><img id="music3imgid" src="./image/music_3.svg" alt=""><br/><span id="music3span">3</span></td>
-                    <td valign="middle"><img id="mute1imgid" src="./image/mute1.svg" alt=""><br/><span id="mute1span">4</span></td>  
+                <tr align="center" height="154px">
+                    <td valign="middle"><img id="music1imgid" src="./image/music_2.svg" alt=""><br/><span id="music1span">梭</span></td>
+                    <td valign="middle"><img id="music2imgid" src="./image/music_2.svg" alt=""><br/><span id="music2span">啦</span></td>
+                    <td valign="middle"><img id="music3imgid" src="./image/music_2.svg" alt=""><br/><span id="music3span">西</span></td>
+                     
                 </tr>                
             </table>
         </div>
@@ -221,18 +221,25 @@
             var topic = device_id+'/in';
             var commond;
             var swtimg = $("#music1imgid").attr("src");
-            if("./image/03-turn-on.svg" == swtimg){
+            if("./image/music_2.svg" == swtimg){
                 commond = '{"music1":false}';
-                $("#music1imgid").attr("src", "./image/03-turn-off.svg");
-                $("#music1span").text("A");
+                $("#music1imgid").attr("src", "./image/music_1.svg");
+                $("#music1span").text("哆");
             }else{
                 commond = '{"music1":true}';
-                $("#music1imgid").attr("src", "./image/03-turn-on.svg");
-                $("#music1span").text("a");
+                $("#music1imgid").attr("src", "./image/music_2.svg");
+                $("#music1span").text("哆");
             }
             client.publish(topic, commond);
         });
 
+		
+		
+		
+		
+		
+		
+		
         // 控制按钮显示的事件
         $("#switchbtn").click(function() {
             var topic = device_id+'/in';
